@@ -1,0 +1,57 @@
+#usage "<b>Generate new device/symbol/package from curent device/symbol/package in library</b>\n"
+       "<p>"
+       "<author>Author: support@cadsoft.de</author>; kxn"
+
+// THIS PROGRAM IS PROVIDED AS IS AND WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED
+
+string edit = "";
+string toName = edit;
+string kxn_cmd = "";
+
+if (library) library(L) {
+
+   if (deviceset) deviceset(D) {
+      edit = D.name;
+      }
+
+   if (symbol) symbol(S) {
+      edit = S.name;
+      }
+   if (package) package(P) {
+      edit = P.name;
+      }
+
+int Result = dlgDialog("Create new Package From this Package") {
+  dlgStretch(0);
+  string h;
+  edit += "_";
+  sprintf(h, "<qt>copy<p><b>%s</b><p>to :</qt>", edit);
+  dlgLabel(h);
+  dlgStretch(0);
+  toName = edit;
+  dlgStringEdit(toName);
+  dlgStretch(0);
+  dlgHBoxLayout {
+     dlgStretch(1);
+     dlgPushButton("+OK") {
+        dlgAccept();
+        }
+     dlgStretch(1);
+     dlgPushButton("-Cancel") dlgReject();
+     dlgStretch(0);
+     };
+  dlgStretch(1);
+  };
+
+  kxn_cmd += "DISPLAY all;";
+  kxn_cmd += "GRID MM;";
+  kxn_cmd += "GROUP (-300 -300) (300 -300) (300 300) (-300 300) (-300 -300);";
+  kxn_cmd += "Cut (0 0);";
+  kxn_cmd += "SET CONFIRM YES;";
+  
+  kxn_cmd += "EDIT " + toName + ";";
+  kxn_cmd += "SET CONFIRM OFF;";
+  kxn_cmd += "paste (0 0);";
+  if (Result == 0) exit (0);
+  exit(kxn_cmd);
+}

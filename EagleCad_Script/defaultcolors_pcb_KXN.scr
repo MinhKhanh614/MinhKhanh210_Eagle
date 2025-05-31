@@ -1,0 +1,80 @@
+# Set the default colors:
+
+set palette black;
+
+set palette  0 0xFF000000;
+set palette  1 0xB43232C8;
+set palette  2 0xB432C832;
+set palette  3 0xB432C8C8;
+set palette  4 0xB4C83232;
+set palette  5 0xB4C832C8;
+set palette  6 0xB4C8C832;
+set palette  7 0xB4C8C8C8;
+set palette  8 0xB4646464;
+set palette  9 0xB40000FF;
+set palette 10 0xB400FF00;
+set palette 11 0xB400FFFF;
+set palette 12 0xB4FF0000;
+set palette 13 0xB4FF00FF;
+set palette 14 0xB4FFFF00;
+set palette 15 0xB4FFFFFF;
+
+set palette colored;
+
+set palette  0 0xFFEEEECE;
+set palette  1 0xB4000080;
+set palette  2 0xB4008000;
+set palette  3 0xB4008080;
+set palette  4 0xB4800000;
+set palette  5 0xB4800080;
+set palette  6 0xB4808000;
+set palette  7 0xB4808080;
+set palette  8 0xB4C0C0C0;
+set palette  9 0xB40000FF;
+set palette 10 0xB400FF00;
+set palette 11 0xB400FFFF;
+set palette 12 0xB4FF0000;
+set palette 13 0xB4FF00FF;
+set palette 14 0xB4FFFF00;
+set palette 15 0xB4000000;
+
+#KXN COLOR
+Set palette 16 0XB42dc937;
+Set palette 17 0XB499c140;
+Set palette 18 0XB4e7b416;
+Set palette 19 0XB4db7b2b;
+Set palette 20 0XB4cc3232;
+Set palette 21 0XB41b85b8;
+Set palette 22 0XB45a5255;
+Set palette 23 0XB4559e83;
+Set palette 24 0XB4ae5a41;
+Set palette 25 0XB4c3cb71;
+Set palette 26 0XB40084ff;
+Set palette 27 0XB444bec7;
+Set palette 28 0XB4ffc300;
+Set palette 29 0XB4fa3c4c;
+Set palette 30 0XB4d696bb;
+Set palette 31 0XB4000000;
+Set palette 32 0XB4e6770b;
+Set palette 33 0XB4d3290f;
+Set palette 34 0XB452d053;
+Set palette 35 0XB4765898;
+
+
+set palette white;
+
+set palette  1 0xB4000080;
+set palette  2 0xB4008000;
+set palette  3 0xB4008080;
+set palette  4 0xB4800000;
+set palette  5 0xB4800080;
+set palette  6 0xB4808000;
+set palette  7 0xB4808080;
+set palette  8 0xB4C0C0C0;
+set palette  9 0xB40000FF;
+set palette 10 0xB400FF00;
+set palette 11 0xB400FFFF;
+set palette 12 0xB4FF0000;
+set palette 13 0xB4FF00FF;
+set palette 14 0xB4FFFF00;
+set palette 15 0xB4000000;

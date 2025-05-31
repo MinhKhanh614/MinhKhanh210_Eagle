@@ -1,0 +1,29 @@
+#https://community.element14.com/products/eagle/f/eagle-user-support-english/15153/using-the-arc-command
+
+#Set a relative origin first and then use the WIRE command which can draw
+##arcs as well. You can use for example polar coordinates.....
+ ===============================================================
+MARK (0.5 1.7);            # relative origin
+
+WIRE (P 0.5 0)  @+0.5  (P 0.5 90);   # polar starting point, radius,
+
+                                        ending point of the arc
+
+#inside ( ):  P for polar coordinates,
+
+              first value: radius from the origin, second: angle)
+
+
+
+** 2nd example with relative coodinates:
+
+  MARK (0.5 1.7);            # relative origin
+
+  WIRE (R0 0.5)  -90  (R0.5 0)    # relative starting point, curve,
+
+                                    relative ending point
+ 
+
+Please see details about the syntax with radius and curve in the help of
+
+the WIRE command and Editor Commands/Command Syntax.

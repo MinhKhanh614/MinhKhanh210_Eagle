@@ -1,0 +1,141 @@
+#usage "<b>Remove actual device/symbol/package and edit next</b>\n"
+       "<p>"
+       "<author>Author: support@cadsoft.de</author>"
+
+// THIS PROGRAM IS PROVIDED AS IS AND WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED
+
+string cmdScript, cmd, s;
+string dev[];
+string sym[];
+string pac[];
+string edit = "";
+int    scount = 0;
+int    dcount = 0;
+int    pcount = 0;
+int    n = 0;
+int Flag_debug = 0;
+
+if (library) library(L) {
+  dlgDialog("Set size to device.") {
+    dlgHBoxLayout dlgSpacing(350);
+    // dlgTextEdit(cmd);
+    dlgLabel("Do you want to see debug?");
+    dlgHBoxLayout {
+      dlgPushButton("-Yes"){
+        Flag_debug = 1;
+        dlgAccept();
+      } 
+      dlgPushButton("+No") dlgReject();
+    }
+  };
+
+  L.devicesets(D) {
+    dcount++;
+    dev[dcount] = D.name;
+    }
+  L.symbols(S) {
+    scount++;
+    sym[scount] = S.name;
+    }
+  L.packages(P) {
+    pcount++;
+    pac[pcount] = P.name;
+    }
+
+    if (deviceset) deviceset(DS) {
+        edit = DS.name;
+        cmd = "EDIT " + DS.name + ".DEV;";   // 1
+        DS.devices(DD) {
+          /////////
+
+            dlgMessageBox(DD.package.name);//kxn
+            string temStringb = "";
+            real temWidthWire;
+            DD.package.wires(dpw){
+                if (dpw.layer == LAYER_DIMENSION) {
+                    temWidthWire = u2mm(dpw.width);
+                }
+            }
+            // sprintf(temStringb,"%f - %f = %f , %f", u2mm(D.package.area.x1), u2mm(D.package.area.x2), abs(u2mm(D.package.area.x1) - u2mm(D.package.area.x2)) - temWidthWire, temWidthWire);
+            // sprintf(temStringb,"Area: (%f %f), (%f %f)\n",
+            //     u2mm(Bb.area.x1), u2mm(Bb.area.y1), u2mm(Bb.area.x2), u2mm(Bb.area.y2));
+            // dlgMessageBox(temStringb);
+            real packageWidth = abs(u2mm(DD.package.area.x1) - u2mm(DD.package.area.x2)) - temWidthWire;
+            real packageHeight = abs(u2mm(DD.package.area.y1) - u2mm(DD.package.area.y2)) - temWidthWire;
+            // sprintf(temStringb,"%f - %f = %f , %f", u2mm(P.area.x1), u2mm(P.area.x2), abs(u2mm(P.area.x1) - u2mm(P.area.x2)) - temWidthWire, temWidthWire);
+            if(Flag_debug == 1){
+              sprintf(temStringb,"Height: %f --- Width: %f", packageHeight, packageWidth);
+              dlgMessageBox(temStringb);
+            }
+            
+            if(DD.name == "''"){
+              cmd += "PACKAGE '';";  
+            }else
+              cmd += "PACKAGE '" + DD.name + "';";
+            cmd += "TECHNOLOGY '';";
+            sprintf(temStringb,"ATTRIBUTE HEIGHT '%f", packageHeight);
+            temStringb = strsub(temStringb, 0, (strlen(temStringb) - 3));
+            temStringb += "';";
+            if(Flag_debug == 1)
+              dlgMessageBox(temStringb);
+            cmd += temStringb;
+
+            sprintf(temStringb,"ATTRIBUTE WIDTH '%f", packageWidth);
+            temStringb = strsub(temStringb, 0, (strlen(temStringb) - 3));
+            temStringb += "';";
+            if(Flag_debug == 1)
+              dlgMessageBox(temStringb);
+            cmd += temStringb;
+
+            if(Flag_debug == 1){
+              dlgDialog("I18N Demo") {
+              dlgHBoxLayout dlgSpacing(350);
+              dlgTextEdit(cmd);
+              dlgHBoxLayout {
+                dlgPushButton("+Ok") dlgAccept();
+                dlgPushButton("-Cancel") dlgReject();
+                }
+              };
+            } 
+            // dlgMessageBox(cmd);
+        }
+    }
+
+   if (package) package(P) {
+      edit = P.name;
+    //   cmd = "REMOVE " + P.name + ";\n" ;
+        dlgMessageBox(P.name);
+        //kxn//
+        string temStringb = "";
+          real temWidthWire;
+          P.wires(dpw){
+              if (dpw.layer == LAYER_DIMENSION) {
+                temWidthWire = u2mm(dpw.width);
+              }
+          }
+        real packageWidth = abs(u2mm(P.area.x1) - u2mm(P.area.x2)) - temWidthWire;
+        real packageHeight = abs(u2mm(P.area.y1) - u2mm(P.area.y2)) - temWidthWire;
+        // sprintf(temStringb,"%f - %f = %f , %f", u2mm(P.area.x1), u2mm(P.area.x2), abs(u2mm(P.area.x1) - u2mm(P.area.x2)) - temWidthWire, temWidthWire);
+        // sprintf(temStringb,"Width: %f --- Height: %f", packageWidth, packageHeight);
+        sprintf(temStringb,"Height: %f --- Width: %f", packageHeight, packageWidth);
+        dlgMessageBox(temStringb);
+
+        //kxn
+      for (n = 1; n < pcount; n++) {
+         if (edit == pac[n]) {
+            break;
+            }
+         }
+
+    //   if (n < dcount) {
+    //      cmd += "EDIT " + pac[n + 1] + ".pac;\n" ;
+    //      }
+    //   else {
+    //      if (pcount > 0) {
+    //         cmd += "EDIT " + pac[n - 1] + ".pac;\n" ;
+    //         }
+    //      else exit (0);
+    //      }
+      }
+  exit(cmd);
+  }

@@ -1,0 +1,203 @@
+#usage "Trace layer, to display layers step by step.<p>"
+       "RUN trace-layer_kxn +<br>"
+       "RUN trace-layer_kxn -<br>"
+       "Layers 17 Pad, 18 Via, 19 Unrouted, 23 tOrigin and 24 bOrigin are not separated displayed"
+
+// Version 1.0  - 2007.06.06 support@cadsoft.de
+
+int    supplyLayer[];
+int    usedLayer[];
+int    mLayer = 0;
+int    lastUsed;
+string cmd;
+string message = "";
+string kxnLayer[] = {
+                "DISPLAY ALL;",
+                "DISPLAY NONE 1 17 18 19 20 23 29;", // di day TOP                         1
+                "DISPLAY NONE 16 17 18 19 20 24 30;", // di day BOT                        2
+                "DISPLAY NONE 1 16 17 18 19 20 23 24 29 30;", // di day                       3
+
+                "DISPLAY NONE 1 16 17 18 19 20 21 23 24 29 30;", // di day, via TOP                      3
+                "DISPLAY NONE 1 16 17 18 19 20 22 23 24 29 30;", // di day, via BOT                      3
+
+                "DISPLAY NONE 17 18 19 20 21 23 29;",          // Xep LK TOP      4
+                "DISPLAY NONE 17 18 19 20 22 24 30;",          // Xep LK BOT      5
+
+                "DISPLAY NONE 17 18 20 21 23 29 51;",          // Xep LK TOP      4
+                "DISPLAY NONE 17 18 20 22 24 30 52;",          // Xep LK BOT      5
+
+                "DISPLAY NONE 17 20 21 29 51;",          // pdf view TOP      4
+                "DISPLAY NONE 17 20 22 30 52;",          // pdf view BOT      5
+
+                "DISPLAY NONE 17 20 23 27 51;",          // pdf view han LK TOP      4
+                "DISPLAY NONE 17 20 24 28 52;",          // pdf view han LK BOT      5
+
+                "DISPLAY NONE 17 20 25 27 51;",          // pdf view han LK TOP      4
+                "DISPLAY NONE 17 20 26 28 52;",          // pdf view han LK BOT      5
+
+                "DISPLAY NONE 19 20 21;",          // Xem chu TOP              6
+                "DISPLAY NONE 17 18 19 20 21;",          // Xep chu TOP        7
+                "DISPLAY NONE 19 20 22;",          // Xem chu BOT              8
+                "DISPLAY NONE 17 18 19 20 22;",          // Xep chu BOT        9
+
+                "DISPLAY NONE 17 20 23 24 51 200;",          // Xem kich thuoc        9
+                "DISPLAY NONE 17 20 51 200;",          // Xem kich thuoc        9
+
+                "DISPLAY NONE 17 20 152;",          // Xem CNC ricocel BOT              8
+
+                "DISPLAY NONE 1 17 18;",         // Xem gerber TOP COPPER               10
+                "DISPLAY NONE 16 17 18;",         // Xem gerber BOT COPPER              11
+                "DISPLAY NONE 21 25 27;",         // Xem gerber TOP SILKSCREEN          12
+                "DISPLAY NONE 22 26 28;",         // Xem gerber BOT SILKSCREEN          13
+                "DISPLAY NONE 29;",         // Xem gerber TOP Soldermask                14
+                "DISPLAY NONE 30;",         // Xem gerber BOT Soldermask                15
+                "DISPLAY NONE 20 44 45;"          // Xem gerber Drill                   16
+};
+int count_Layerkxn = 0;
+for(int cf = 0; kxnLayer[cf]; ++cf){
+    count_Layerkxn++;
+}
+// string tt = "";
+// sprintf(tt, "%d", count_Layerkxn);
+// dlgMessageBox(tt);
+
+string layerFile = filesetext(argv[0], ".trl");
+string f[];
+int    isFile = fileglob(f, layerFile);
+
+void checkLayer(void) {
+  if (argv[1] == "+") {
+    // if (mLayer == 23 || mLayer == 24) mLayer = 25;
+    // if (mLayer == 17 || mLayer == 18 || mLayer == 19) mLayer = 20;
+    lastUsed = mLayer;
+  }
+  if (argv[1] == "-") {
+    // if (mLayer == 23 || mLayer == 24) mLayer = 22;
+    // if (mLayer == 17 || mLayer == 18 || mLayer == 19) mLayer = 16;
+    lastUsed = mLayer;
+  }
+  return;
+}
+
+if (isFile) {
+  string rLayer;
+  int n = fileread(rLayer, layerFile);
+  mLayer = strtol(rLayer);
+  if(mLayer >= count_Layerkxn){
+      mLayer = count_Layerkxn - 1;
+  }
+}
+
+string tt = "";
+sprintf(tt, "%d", mLayer);
+// dlgMessageBox(tt);
+
+if (argv[1] == "-") {
+  mLayer --;
+  if (board) {
+        sprintf(tt, "--%d", mLayer);
+        // dlgMessageBox(tt);
+    if (mLayer <= 0) {
+        // if (mLayer < 1) {
+    //   if (!mLayer) message = "The first layer.";
+    //   mLayer = 1;
+      mLayer = 0;
+    }
+  }
+  else if (schematic) {
+    if (mLayer < 91) mLayer = 91;
+  }
+}
+
+if (argv[1] == "+") {
+  mLayer ++;
+//   if (mLayer >255) {
+  if(mLayer > count_Layerkxn){
+    mLayer = count_Layerkxn - 1;
+    // if (!mLayer) message = "The last layer.";
+  }
+}
+
+
+checkLayer();
+if (board) {
+  board(B) {
+    // B.layers(L) {
+    //   if (L.used) {
+    //     usedLayer[L.number] = 1;
+    //   }
+    //   string ln = L.name;
+    //   if (ln[0] == '$') {
+    //     usedLayer[L.number] = 1;
+    //     supplyLayer[L.number] = 1;
+    //   }
+    // }
+    // if (argv[1] == "+") {
+    //   if (!usedLayer[mLayer]) {
+    //     do {
+    //       mLayer++;
+    //       if (usedLayer[mLayer]) break;
+    //     } while (mLayer < 256);
+    //     if (mLayer >= 255) message = "The last Layer.";
+    //   }
+    // }
+    // if (argv[1] == "-") {
+    //   if (!usedLayer[mLayer]) {
+    //     do {
+    //       mLayer--;
+    //       if (usedLayer[mLayer]) break;
+    //     } while (mLayer > 1);
+    //   }
+    // }
+
+    checkLayer();
+    // if (usedLayer[mLayer]) {
+    //   if (mLayer < 17) {
+      if (mLayer < count_Layerkxn) {
+        // if (supplyLayer[mLayer]) {
+        //   sprintf(cmd, "DISPLAY NONE %d;\n", mLayer);
+        //   message ="<font color=\"red\"><b>ATTENTION</b></font> this is a <b>Supply</b> layer, <b>do not use</b> this Layer in CAM-Job with <b>Pad</b>- and/or <b>Via</b>-Layer.";
+        // }
+        // else {
+        //   sprintf(cmd, "DISPLAY NONE %d 17 18;\n", mLayer);
+        // }
+        sprintf(tt, "arr%d", mLayer);
+        // dlgMessageBox(tt);
+        cmd = kxnLayer[mLayer];
+      }
+    //   else {
+    //     sprintf(cmd, "DISPLAY NONE %d;\n", mLayer);
+    //   }
+      lastUsed = mLayer;
+    // }
+  }
+}
+checkLayer();
+if (lastUsed >= 0) {
+  output(layerFile, "wtD") {
+    printf("%d", lastUsed);
+
+    // dlgDialog("trace-layer_kxn Demo") {
+    // dlgHBoxLayout dlgSpacing(350);
+    // // dlgTextEdit(cmd);
+    // dlgLabel(cmd);
+    // dlgHBoxLayout {
+    //     dlgPushButton("+Ok") dlgAccept();
+    //     dlgPushButton("-Cancel") dlgReject();
+    //     }
+    // }; 
+
+  }
+}
+// if (message) {
+//   string s;
+//   sprintf(s, "RUN ulpmessage '%s';\n", message);
+//   cmd += s;
+
+  
+// }
+
+// DISPLAY NONE 20;  // display layer cmd
+
+exit (cmd);
+

@@ -1,0 +1,35 @@
+#script dung  de copy hinh (chua text bên trong) ra 2 layer tstop va bstop => Microbit Pad
+#chuyen unit mm
+Grid MM 0.005500 ON;
+
+#hien thi layer tPlace
+DISPLAY NONE 29;
+
+#Chon image
+GROUP (-1.0000 -1.0000) (10.0000 -1.0000) (10.0000 10.0000) (-1.0000 10.0000) (-1.0000 -1.0000);
+
+CUT (0 0);
+
+#change to layer tStop-29
+change layer 29;
+SET CONFIRM YES;
+PASTE (-2.2000 -6.0000);
+SET CONFIRM OFF;
+
+
+#Chon image
+GROUP (-1.0000 -1.0000) (10.0000 -1.0000) (10.0000 10.0000) (-1.0000 10.0000) (-1.0000 -1.0000);
+
+#https://forums.autodesk.com/t5/eagle-forum/mirrored-paste-in-script/td-p/7333128
+SET CONFIRM YES;
+PASTE MR0 (2.2000 -6.0000);
+SET CONFIRM OFF;
+
+#Chon image
+GROUP (-1.0000 -1.0000) (10.0000 -1.0000) (10.0000 10.0000) (-1.0000 10.0000) (-1.0000 -1.0000);
+
+#https://github.com/driedell/EagleCAD_Scripts/blob/master/delete-signals.scr
+DELETE (>0 0);
+
+Grid MM 1.2700 ON;
+DISPLAY ALL;

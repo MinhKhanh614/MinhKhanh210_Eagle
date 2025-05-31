@@ -1,0 +1,475 @@
+#usage "<b>Mounting data generator for Kayo PNP machine</b>\n"
+
+real width = 0;
+real height = 0;
+real numRow = 1;
+real numCol = 1;
+string boardSize = "";
+
+void help_kxn(){
+  string temString = "Note1: If you have Frame,Makesure your Frame 's value is PCB\n";
+  temString += "Note 2: Your Frame must be declared 2 attribute, which are WIDTH and HEIGHT (mm)(In Library)\n";
+  temString += "Note 3: If you don not have Frame, program will detect WIRE (Dimension Layer)";
+  // sprintf(temString);
+  dlgMessageBox(temString);
+}
+
+int containsString(string toSearch, string toFind)
+{
+	int pos = strstr(strlwr(toSearch), strlwr(toFind));
+	if (pos >= 0) //String found
+	{
+		return (1);
+	}
+
+	return (0);
+}
+
+int getBoardSizeOverScanTexts()
+{
+	//Search the ordering instructions box
+	board(BB)
+	{
+		BB.texts(T)
+		{ 
+      // dlgMessageBox(T.value);
+			if (containsString(T.value, "BOARD_SIZE_W_H") == 1)
+			{
+				
+				string temp_a[];
+				int temp_n = strsplit(temp_a, T.value, ':'); 
+        if(temp_n >= 2){
+          dlgMessageBox("detect board size");
+          dlgMessageBox(temp_a[1]); //w
+          dlgMessageBox(temp_a[2]); //h
+          width = strtod(temp_a[1]);
+          height = strtod(temp_a[2]);
+          return 1;
+        }
+				
+			}
+		}
+	}
+
+	return 0;
+}
+
+void GetSizeFrame(void){
+  dlgMessageBox("scan size board");
+  if(getBoardSizeOverScanTexts() == 0){
+    board(B_kxn1){
+      B_kxn1.elements(Ekxn1){
+        if(Ekxn1.value == "PCB"){
+          if (Ekxn1.attribute["WIDTH"]){
+              // string temString = "";
+              // sprintf(temString,"%s: %s\n", Ekxn1.name, Ekxn1.attribute["WIDTH"]);
+              // dlgMessageBox(temString);
+              width = strtod(Ekxn1.attribute["WIDTH"]);
+          }
+          if (Ekxn1.attribute["HEIGHT"]){
+              // string temString = "";
+              // sprintf(temString,"%s: %s\n", Ekxn1.name, Ekxn1.attribute["HEIGHT"]);
+              // dlgMessageBox(temString);
+              height = strtod(Ekxn1.attribute["HEIGHT"]);
+          }
+          if(Ekxn1.angle == 0 || Ekxn1.angle == 180){
+            // string temString = "";
+            // sprintf(temString,"name: %s  w: %s  h: %s\n",Ekxn1.name, width, height);
+            // dlgMessageBox(temString);
+            // width = strtod(Ekxn1.attribute["WIDTH"]);
+            // height = strtod(Ekxn1.attribute["HEIGHT"]);
+          }else{
+            // string temString = "";
+            // sprintf(temString,"name: %s  w: %s  h: %s\n",Ekxn1.name, Ekxn1.attribute["HEIGHT"], Ekxn1.attribute["WIDTH"]);
+            // sprintf(temString,"name: %s  w: %s  h: %s\n",Ekxn1.name, Ekxn1.attribute["HEIGHT"], Ekxn1.attribute["WIDTH"]);
+            // dlgMessageBox(temString);
+            real temvalue = height;
+            height = width;
+            width = temvalue;
+          }
+          string temString2 = "";
+          sprintf(temString2,"name: %s  w: %f  h: %f\n",Ekxn1.name, width, height);
+          dlgMessageBox(temString2);
+        }
+        
+      }
+    }
+  }
+  
+  
+}
+
+board(B) {
+  help_kxn();
+
+  ////// Get size board
+  char firstPoint = 'y';
+  real x1;
+  real y1;
+  real x2;
+  real y2;
+  
+  B.wires(W) {
+			if (W.layer == LAYER_DIMENSION) {
+				// Wire is on dimension layer
+				real wx1 = u2mm(W.x1);
+				real wy1 = u2mm(W.y1);
+				real wx2 = u2mm(W.x2);
+				real wy2 = u2mm(W.y2);
+
+				// Start point of wire
+				if(firstPoint == 'y') {
+					firstPoint = 'n';
+					x1 = wx1;
+					x2 = wx1;
+					y1 = wy1;
+					y2 = wy2;
+				} else {
+					if(wx1 > x1) {
+						x1 = wx1;
+					}
+					if(wx1 < x2) {
+						x2 = wx1;
+					}
+					if(wy1 > y1) {
+						y1 = wy1;
+					}
+					if(wy1 < y2) {
+						y2 = wy1;
+					}
+				}
+
+				// End point of wire
+				if(wx2 > x1) {
+					x1 = wx2;
+				}
+				if(wx2 < x2) {
+					x2 = wx2;
+				}
+				if(wy2 > y1) {
+					y1 = wy2;
+				}
+				if(wy2 < y2) {
+					y2 = wy2;
+				}
+
+			}
+	}
+
+  
+  width = abs(x1 - x2);
+  height = abs(y1 - y2);
+  numRow = 1;
+  numCol = 1;
+  boardSize = "";
+
+  // real width = abs(x1 - x2);
+  // real height = abs(y1 - y2);
+  // real numRow = 1;
+  // real numCol = 1;
+  // string boardSize = "";
+  sprintf(boardSize, "Size: (w:%f x h:%f)\n", width, height);
+  
+  ////// End get size board
+  // display  
+  int Result2 = dlgDialog("Hello") {
+    dlgLabel(boardSize);
+    dlgPushButton("+OK") dlgAccept();
+  };
+
+  // Get filename
+  string fileName = dlgFileSave("Top - Save File", filesetext(B.name, "-top.csv"), "*.csv");
+  string fileName_txt = dlgFileSave("Top - Save File", filesetext(B.name, "-top.txt"), "*.txt");
+  if (fileName == "") exit(0);
+
+  real mx = 1000;
+  real mxReset = 1000;
+  real my = 1000;
+  real myReset = 1000;
+  real cx = 0.0;
+  real cy = 0.0;
+  
+  GetSizeFrame();
+  // B.elements(Ekxn1){
+  //   if(Ekxn1.value == "PCB"){
+  //     if (Ekxn1.attribute["WIDTH"]){
+  //         string temString = "";
+  //         sprintf(temString,"%s: %s\n", Ekxn1.name, Ekxn1.attribute["WIDTH"]);
+  //         dlgMessageBox(temString);
+  //     }
+  //     if (Ekxn1.attribute["HEIGHT"]){
+  //         string temString = "";
+  //         sprintf(temString,"%s: %s\n", Ekxn1.name, Ekxn1.attribute["HEIGHT"]);
+  //         dlgMessageBox(temString);
+  //     }
+  //     if(Ekxn1.angle == 0 || Ekxn1.angle == 180){
+  //       string temString = "";
+  //       sprintf(temString,"name: %s  w: %s  h: %s\n",Ekxn1.name, Ekxn1.attribute["WIDTH"], Ekxn1.attribute["HEIGHT"]);
+  //       dlgMessageBox(temString);
+  //       width = strtod(Ekxn1.attribute["WIDTH"]);
+  //       height = strtod(Ekxn1.attribute["HEIGHT"]);
+  //     }else{
+  //       string temString = "";
+  //       sprintf(temString,"name: %s  w: %s  h: %s\n",Ekxn1.name, Ekxn1.attribute["HEIGHT"], Ekxn1.attribute["WIDTH"]);
+  //       dlgMessageBox(temString);
+  //       height = strtod(Ekxn1.attribute["WIDTH"]);
+  //       width = strtod(Ekxn1.attribute["HEIGHT"]);
+  //     }
+  //   }
+    
+  // }
+
+  int Result = dlgDialog("Machine parameters") {
+    dlgGridLayout {
+      dlgCell(0,0) dlgLabel("Machine xy of the first component:");
+      dlgCell(0,1) dlgRealEdit(mx, -1.0, 1000.0);
+      dlgCell(0,2) dlgRealEdit(my, -1.0, 1000.0)
+    }
+    dlgGridLayout {
+      dlgCell(0,0) dlgLabel("Width and Height Board (mm):");
+      dlgCell(0,1) dlgRealEdit(width, width - 10.0, 1000.0);
+      dlgCell(0,2) dlgRealEdit(height, height - 10.0, 1000.0)
+    }
+    dlgGridLayout {
+      dlgCell(0,0) dlgLabel("Number of Row and Colum to Panel line:");
+      dlgCell(0,1) dlgRealEdit(numRow, 1, 100);
+      dlgCell(0,2) dlgRealEdit(numCol, numCol, 100)
+    }
+    dlgSpacing(10);
+    dlgHBoxLayout {
+      dlgPushButton("+Generate") {
+        dlgAccept();
+        output(fileName) {
+
+          printf("Designator,Footprint,Mid X,Mid Y,Layer,Rotation,Comment\n");
+          // printf(",,,,,,\n");
+
+          int first = 0;
+          mxReset = mx;
+          myReset = my;
+          B.elements(E) {
+            int wasSmd = 0;
+                /*xmax =-2147483648,
+                xmin = 2147483647,
+                ymax = xmax,
+                ymin = xmin;*/
+            real angle = 0;
+
+
+            E.package.contacts(C) {
+              if (C.smd && C.smd.layer == 1) {
+                wasSmd = 1;
+
+                /*if (C.x > xmax) xmax = C.x;
+                if (C.y > ymax) ymax = C.y;
+                if (C.x < xmin) xmin = C.x;
+                if (C.y < ymin) ymin = C.y;*/
+              }
+            }
+            
+            if (wasSmd) {
+              if(E.angle <= 180)
+                angle = E.angle;
+              else
+                angle = E.angle - 360;
+              if(first==0) {
+                mx = mx - u2mm(E.x);
+                my = my - u2mm(E.y);
+                cx = u2mm(E.x) + mx;
+                cy = u2mm(E.y) + my;
+                first = 1;
+                // kxn add
+                // printf("%s,%s,%.2fmm,%.2fmm,T,%.0f,%s\n",
+                //   E.name + "_TOP_LEFT", E.package.name, cx, cy, angle, E.value);
+                  string tempLocation = "_TOP_LEFT";
+                  for(int cfr = 0; cfr < numRow; cfr++){
+                    for(int cfc = 0; cfc < numCol; cfc++){
+                      if((cfc > 0 && cfc < numCol - 1) || (cfr > 0 && cfr < numRow - 1)){
+                        continue;
+                      }
+                      real temCy = cy - height * cfr;
+                      real temCx = cx + width * cfc;
+                      if(cfc == 0 && cfr == 0){
+                        tempLocation = "_TOP_LEFT";
+                      }else if(cfc == 0 && cfr == (numRow - 1)){
+                        tempLocation = "_BOT_LEFT";
+                      }else if(cfc == (numCol - 1) && cfr == 0){
+                        tempLocation = "_TOP_RIGHT";
+                      }else if(cfc == (numCol - 1) && cfr == (numRow -1)){
+                        tempLocation = "_BOT_RIGHT";
+                      };
+                      printf("%s,%s,%.2fmm,%.2fmm,T,%.0f,%s\n",
+                                  E.name + tempLocation, E.package.name, temCx, temCy, angle, "MarkPoint");
+                    }
+                    
+                  }
+              } else if(first==1) {
+                // mx = mx - u2mm(E.x);
+                // my = my - u2mm(E.y);
+                cx = u2mm(E.x) + mx;
+                cy = u2mm(E.y) + my;
+                first = 2;
+                // kxn add
+                // printf("%s,%s,%.2fmm,%.2fmm,T,%.0f,%s\n",
+                //   E.name + "_TOP_LEFT", E.package.name, cx, cy, angle, E.value);
+                  string tempLocation = "_TOP_LEFT";
+                  for(int cfr = 0; cfr < numRow; cfr++){
+                    for(int cfc = 0; cfc < numCol; cfc++){
+                      if((cfc > 0 && cfc < numCol - 1) || (cfr > 0 && cfr < numRow - 1)){
+                        continue;
+                      }
+                      real temCy = cy - height * cfr;
+                      real temCx = cx + width * cfc;
+                      if(cfc == 0 && cfr == 0){
+                        tempLocation = "_TOP_LEFT";
+                      }else if(cfc == 0 && cfr == (numRow - 1)){
+                        tempLocation = "_BOT_LEFT";
+                      }else if(cfc == (numCol - 1) && cfr == 0){
+                        tempLocation = "_TOP_RIGHT";
+                      }else if(cfc == (numCol - 1) && cfr == (numRow -1)){
+                        tempLocation = "_BOT_RIGHT";
+                      };
+                      printf("%s,%s,%.2fmm,%.2fmm,T,%.0f,%s\n",
+                                  E.name + tempLocation, E.package.name, temCx, temCy, angle, "MarkPoint");
+                    }
+                    
+                  }
+              } else {
+                cx = u2mm(E.x) + mx;
+                cy = u2mm(E.y) + my;
+              }
+              printf("%s,%s,%.2fmm,%.2fmm,T,%.0f,%s\n",
+                  E.name, E.package.name, cx, cy, angle, E.value);
+            }
+          }
+          
+        }
+
+        output(fileName_txt) {
+
+          printf("Designator Footprint Mid_X Mid_Y Layer Rotation Comment \n");
+          // printf(",,,,,,\n");
+
+          int first = 0;
+          B.elements(E) {
+            int wasSmd = 0;
+                /*xmax =-2147483648,
+                xmin = 2147483647,
+                ymax = xmax,
+                ymin = xmin;*/
+            real angle = 0;
+
+
+            E.package.contacts(C) {
+              if (C.smd && C.smd.layer == 1) {
+                wasSmd = 1;
+
+                /*if (C.x > xmax) xmax = C.x;
+                if (C.y > ymax) ymax = C.y;
+                if (C.x < xmin) xmin = C.x;
+                if (C.y < ymin) ymin = C.y;*/
+              }
+            }
+            
+            if (wasSmd) {
+              if(E.angle <= 180)
+                angle = E.angle;
+              else
+                angle = E.angle - 360;
+              if(first==0) {
+                mx = mxReset;
+                my = myReset;
+                mx = mx - u2mm(E.x);
+                my = my - u2mm(E.y);
+                cx = u2mm(E.x) + mx;
+                cy = u2mm(E.y) + my;
+                first = 1;
+                // kxn add
+                // printf("%s,%s,%.2fmm,%.2fmm,T,%.0f,%s\n",
+                //   E.name + "_TOP_LEFT", E.package.name, cx, cy, angle, E.value);
+                
+                  string tempLocation = "_TOP_LEFT";
+                  for(int cfr = 0; cfr < numRow; cfr++){
+                    for(int cfc = 0; cfc < numCol; cfc++){
+                      if((cfc > 0 && cfc < numCol - 1) || (cfr > 0 && cfr < numRow - 1)){
+                        continue;
+                      }
+                      real temCy = cy - height * cfr;
+                      real temCx = cx + width * cfc;
+                      if(cfc == 0 && cfr == 0){
+                        tempLocation = "_TOP_LEFT";
+                      }else if(cfc == 0 && cfr == (numRow - 1)){
+                        tempLocation = "_BOT_LEFT";
+                      }else if(cfc == (numCol - 1) && cfr == 0){
+                        tempLocation = "_TOP_RIGHT";
+                      }else if(cfc == (numCol - 1) && cfr == (numRow -1)){
+                        tempLocation = "_BOT_RIGHT";
+                      };
+                      string temString2 = "";
+                      sprintf(temString2,"%s %s %.2fmm %.2fmm T %.0f %s cx: %.2fmm; mx: %.2fmm; height: %.2fmm; mxReset: %.2fmm\n",
+                                  E.name + tempLocation, E.package.name, temCx, temCy, angle, "MarkPoint", cx, mx, height, mxReset);
+                      dlgMessageBox(temString2);
+
+                      printf("%s %s %.2fmm %.2fmm T %.0f %s \n",
+                                  E.name + tempLocation, E.package.name, temCx, temCy, angle, "MarkPoint");
+                    }
+                    
+                  }
+              } else if(first==1) {
+                // mx = mxReset;
+                // my = myReset;
+                // mx = mx - u2mm(E.x);
+                // my = my - u2mm(E.y);
+                cx = u2mm(E.x) + mx;
+                cy = u2mm(E.y) + my;
+                first = 2;
+                // kxn add
+                // printf("%s,%s,%.2fmm,%.2fmm,T,%.0f,%s\n",
+                //   E.name + "_TOP_LEFT", E.package.name, cx, cy, angle, E.value);
+                
+                  string tempLocation = "_TOP_LEFT";
+                  for(int cfr = 0; cfr < numRow; cfr++){
+                    for(int cfc = 0; cfc < numCol; cfc++){
+                      if((cfc > 0 && cfc < numCol - 1) || (cfr > 0 && cfr < numRow - 1)){
+                        continue;
+                      }
+                      real temCy = cy - height * cfr;
+                      real temCx = cx + width * cfc;
+                      if(cfc == 0 && cfr == 0){
+                        tempLocation = "_TOP_LEFT";
+                      }else if(cfc == 0 && cfr == (numRow - 1)){
+                        tempLocation = "_BOT_LEFT";
+                      }else if(cfc == (numCol - 1) && cfr == 0){
+                        tempLocation = "_TOP_RIGHT";
+                      }else if(cfc == (numCol - 1) && cfr == (numRow -1)){
+                        tempLocation = "_BOT_RIGHT";
+                      };
+                      string temString2 = "";
+                      sprintf(temString2,"%s %s %.2fmm %.2fmm T %.0f %s cx: %.2fmm; mx: %.2fmm; height: %.2fmm; mxReset: %.2fmm\n",
+                                  E.name + tempLocation, E.package.name, temCx, temCy, angle, "MarkPoint", cx, mx, height, mxReset);
+                      dlgMessageBox(temString2);
+
+                      printf("%s %s %.2fmm %.2fmm T %.0f %s \n",
+                                  E.name + tempLocation, E.package.name, temCx, temCy, angle, "MarkPoint");
+                    }
+                    
+                  }
+              } else {
+                cx = u2mm(E.x) + mx;
+                cy = u2mm(E.y) + my;
+              }
+              printf("%s %s %.2fmm %.2fmm T %.0f %s \n",
+                  E.name, E.value, cx, cy, angle, E.package.name);
+
+              // printf("%s %s %.2fmm %.2fmm T %.0f %s \n",
+              //     E.name, E.package.name, cx, cy, angle, E.value);
+            }
+          }
+          
+        }
+      }
+      dlgPushButton("Cancel") dlgReject();
+    }
+  };
+}
+
