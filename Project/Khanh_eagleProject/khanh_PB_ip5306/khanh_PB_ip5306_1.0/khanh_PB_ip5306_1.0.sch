@@ -6556,7 +6556,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <busses>
 </busses>
 <nets>
-<net name="VIN" class="0">
+<net name="S'HO" class="0">
 <segment>
 <pinref part="U_1" gate="G$1" pin="P$1"/>
 <wire x1="-10.16" y1="66.04" x2="12.7" y2="66.04" width="0.1524" layer="91"/>

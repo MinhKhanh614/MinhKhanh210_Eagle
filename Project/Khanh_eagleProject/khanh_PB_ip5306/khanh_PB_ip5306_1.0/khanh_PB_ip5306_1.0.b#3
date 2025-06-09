@@ -6,9 +6,9 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
@@ -23,20 +23,20 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -46,20 +46,20 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
-<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -67,9 +67,9 @@
 <layer number="58" name="bCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
-<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
-<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="no" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="no" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="no" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="no"/>
@@ -80,92 +80,92 @@
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
 <layer number="99" name="SpiceOrder" color="7" fill="1" visible="no" active="no"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
-<layer number="101" name="Patch_Top" color="12" fill="4" visible="yes" active="yes"/>
-<layer number="102" name="Vscore" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="103" name="tMap" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="104" name="Name" color="16" fill="1" visible="yes" active="yes"/>
-<layer number="105" name="tPlate" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="106" name="bPlate" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="107" name="Crop" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="108" name="tplace-old" color="10" fill="1" visible="yes" active="yes"/>
-<layer number="109" name="ref-old" color="11" fill="1" visible="yes" active="yes"/>
-<layer number="110" name="fp0" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="111" name="LPC17xx" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="113" name="IDFDebug" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="114" name="Badge_Outline" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
-<layer number="117" name="PM_Ref" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="118" name="Rect_Pads" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="119" name="PF_Ref" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="120" name="WFL_Ref" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="124" name="bTestmark" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="125" name="_tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="130" name="SMDSTROOK" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="133" name="bottom_silk" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="134" name="silk_top" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="135" name="silk_bottom" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="136" name="silktop" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="137" name="silkbottom" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="138" name="EEE" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="139" name="_tKeepout" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="140" name="mbKeepout" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="141" name="ASSEMBLY_TOP" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="142" name="mbRestrict" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="143" name="PLACE_BOUND_TOP" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="145" name="DrillLegend_01-16" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="146" name="DrillLegend_01-20" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="147" name="PIN_NUMBER" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="149" name="DrillLegend_02-15" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="153" name="FabDoc1" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="154" name="FabDoc2" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="155" name="FabDoc3" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="156" name="gesam-Maß" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="157" name="FaceMchng" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="158" name="FaceMMeas" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="159" name="Geh-Bear2" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="160" name="Topologie" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="161" name="tomplace2" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="166" name="AntennaArea" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="168" name="4mmHeightArea" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="191" name="mNets" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="192" name="mBusses" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="193" name="mPins" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="194" name="mSymbols" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="195" name="mNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="196" name="mValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="200" name="200bmp" color="1" fill="10" visible="yes" active="yes"/>
-<layer number="201" name="201bmp" color="2" fill="10" visible="yes" active="yes"/>
-<layer number="202" name="202bmp" color="3" fill="10" visible="yes" active="yes"/>
-<layer number="203" name="203bmp" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="204" name="204bmp" color="5" fill="10" visible="yes" active="yes"/>
-<layer number="205" name="205bmp" color="6" fill="10" visible="yes" active="yes"/>
-<layer number="206" name="206bmp" color="7" fill="10" visible="yes" active="yes"/>
-<layer number="207" name="207bmp" color="8" fill="10" visible="yes" active="yes"/>
-<layer number="208" name="208bmp" color="9" fill="10" visible="yes" active="yes"/>
-<layer number="209" name="209bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="210" name="210bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="211" name="211bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="212" name="212bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="213" name="213bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="214" name="214bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="215" name="215bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="216" name="216bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="101" name="Patch_Top" color="12" fill="4" visible="no" active="yes"/>
+<layer number="102" name="Vscore" color="7" fill="1" visible="no" active="yes"/>
+<layer number="103" name="tMap" color="7" fill="1" visible="no" active="yes"/>
+<layer number="104" name="Name" color="16" fill="1" visible="no" active="yes"/>
+<layer number="105" name="tPlate" color="7" fill="1" visible="no" active="yes"/>
+<layer number="106" name="bPlate" color="7" fill="1" visible="no" active="yes"/>
+<layer number="107" name="Crop" color="7" fill="1" visible="no" active="yes"/>
+<layer number="108" name="tplace-old" color="10" fill="1" visible="no" active="yes"/>
+<layer number="109" name="ref-old" color="11" fill="1" visible="no" active="yes"/>
+<layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
+<layer number="111" name="LPC17xx" color="7" fill="1" visible="no" active="yes"/>
+<layer number="112" name="tSilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="113" name="IDFDebug" color="7" fill="1" visible="no" active="yes"/>
+<layer number="114" name="Badge_Outline" color="7" fill="1" visible="no" active="yes"/>
+<layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="no" active="yes"/>
+<layer number="116" name="Patch_BOT" color="9" fill="4" visible="no" active="yes"/>
+<layer number="117" name="PM_Ref" color="7" fill="1" visible="no" active="yes"/>
+<layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="yes"/>
+<layer number="119" name="PF_Ref" color="7" fill="1" visible="no" active="yes"/>
+<layer number="120" name="WFL_Ref" color="7" fill="1" visible="no" active="yes"/>
+<layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
+<layer number="124" name="bTestmark" color="7" fill="1" visible="no" active="yes"/>
+<layer number="125" name="_tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="126" name="_bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="127" name="_tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="128" name="_bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="129" name="Mask" color="7" fill="1" visible="no" active="yes"/>
+<layer number="130" name="SMDSTROOK" color="7" fill="1" visible="no" active="yes"/>
+<layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="133" name="bottom_silk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="134" name="silk_top" color="7" fill="1" visible="no" active="yes"/>
+<layer number="135" name="silk_bottom" color="7" fill="1" visible="no" active="yes"/>
+<layer number="136" name="silktop" color="7" fill="1" visible="no" active="yes"/>
+<layer number="137" name="silkbottom" color="7" fill="1" visible="no" active="yes"/>
+<layer number="138" name="EEE" color="7" fill="1" visible="no" active="yes"/>
+<layer number="139" name="_tKeepout" color="7" fill="1" visible="no" active="yes"/>
+<layer number="140" name="mbKeepout" color="7" fill="1" visible="no" active="yes"/>
+<layer number="141" name="ASSEMBLY_TOP" color="7" fill="1" visible="no" active="yes"/>
+<layer number="142" name="mbRestrict" color="7" fill="1" visible="no" active="yes"/>
+<layer number="143" name="PLACE_BOUND_TOP" color="7" fill="1" visible="no" active="yes"/>
+<layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="yes"/>
+<layer number="145" name="DrillLegend_01-16" color="7" fill="1" visible="no" active="yes"/>
+<layer number="146" name="DrillLegend_01-20" color="7" fill="1" visible="no" active="yes"/>
+<layer number="147" name="PIN_NUMBER" color="7" fill="1" visible="no" active="yes"/>
+<layer number="149" name="DrillLegend_02-15" color="7" fill="1" visible="no" active="yes"/>
+<layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
+<layer number="152" name="_bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="153" name="FabDoc1" color="7" fill="1" visible="no" active="yes"/>
+<layer number="154" name="FabDoc2" color="7" fill="1" visible="no" active="yes"/>
+<layer number="155" name="FabDoc3" color="7" fill="1" visible="no" active="yes"/>
+<layer number="156" name="gesam-Maß" color="7" fill="1" visible="no" active="yes"/>
+<layer number="157" name="FaceMchng" color="7" fill="1" visible="no" active="yes"/>
+<layer number="158" name="FaceMMeas" color="7" fill="1" visible="no" active="yes"/>
+<layer number="159" name="Geh-Bear2" color="7" fill="1" visible="no" active="yes"/>
+<layer number="160" name="Topologie" color="7" fill="1" visible="no" active="yes"/>
+<layer number="161" name="tomplace2" color="7" fill="1" visible="no" active="yes"/>
+<layer number="166" name="AntennaArea" color="7" fill="1" visible="no" active="yes"/>
+<layer number="168" name="4mmHeightArea" color="7" fill="1" visible="no" active="yes"/>
+<layer number="191" name="mNets" color="7" fill="1" visible="no" active="yes"/>
+<layer number="192" name="mBusses" color="7" fill="1" visible="no" active="yes"/>
+<layer number="193" name="mPins" color="7" fill="1" visible="no" active="yes"/>
+<layer number="194" name="mSymbols" color="7" fill="1" visible="no" active="yes"/>
+<layer number="195" name="mNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="196" name="mValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="199" name="Contour" color="7" fill="1" visible="no" active="yes"/>
+<layer number="200" name="200bmp" color="1" fill="10" visible="no" active="yes"/>
+<layer number="201" name="201bmp" color="2" fill="10" visible="no" active="yes"/>
+<layer number="202" name="202bmp" color="3" fill="10" visible="no" active="yes"/>
+<layer number="203" name="203bmp" color="4" fill="10" visible="no" active="yes"/>
+<layer number="204" name="204bmp" color="5" fill="10" visible="no" active="yes"/>
+<layer number="205" name="205bmp" color="6" fill="10" visible="no" active="yes"/>
+<layer number="206" name="206bmp" color="7" fill="10" visible="no" active="yes"/>
+<layer number="207" name="207bmp" color="8" fill="10" visible="no" active="yes"/>
+<layer number="208" name="208bmp" color="9" fill="10" visible="no" active="yes"/>
+<layer number="209" name="209bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="210" name="210bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="211" name="211bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="212" name="212bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="213" name="213bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="214" name="214bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="215" name="215bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="216" name="216bmp" color="7" fill="1" visible="no" active="yes"/>
 <layer number="217" name="217bmp" color="18" fill="1" visible="no" active="no"/>
 <layer number="218" name="218bmp" color="19" fill="1" visible="no" active="no"/>
 <layer number="219" name="219bmp" color="20" fill="1" visible="no" active="no"/>
@@ -174,23 +174,23 @@
 <layer number="222" name="222bmp" color="23" fill="1" visible="no" active="no"/>
 <layer number="223" name="223bmp" color="24" fill="1" visible="no" active="no"/>
 <layer number="224" name="224bmp" color="25" fill="1" visible="no" active="no"/>
-<layer number="225" name="225bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="226" name="226bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="227" name="227bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="228" name="228bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="231" name="231bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="225" name="225bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="226" name="226bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="227" name="227bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="228" name="228bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="229" name="229bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="230" name="230bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="231" name="231bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="yes"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="yes"/>
+<layer number="248" name="Housing" color="7" fill="1" visible="no" active="yes"/>
+<layer number="249" name="Edge" color="7" fill="1" visible="no" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
-<layer number="252" name="BR-BS" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="253" name="Extra" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="252" name="BR-BS" color="7" fill="1" visible="no" active="yes"/>
+<layer number="253" name="Extra" color="7" fill="1" visible="no" active="yes"/>
+<layer number="254" name="cooling" color="7" fill="1" visible="no" active="yes"/>
+<layer number="255" name="routoute" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
 <plain>
@@ -530,7 +530,7 @@ design rules under a new name.</description>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
 <param name="tpViaShape" value="round"/>
-<param name="PrefDir.1" value="|"/>
+<param name="PrefDir.1" value="*"/>
 <param name="PrefDir.2" value="0"/>
 <param name="PrefDir.3" value="0"/>
 <param name="PrefDir.4" value="0"/>
@@ -545,7 +545,7 @@ design rules under a new name.</description>
 <param name="PrefDir.13" value="0"/>
 <param name="PrefDir.14" value="0"/>
 <param name="PrefDir.15" value="0"/>
-<param name="PrefDir.16" value="-"/>
+<param name="PrefDir.16" value="*"/>
 <param name="cfVia" value="8"/>
 <param name="cfNonPref" value="5"/>
 <param name="cfChangeDir" value="2"/>
@@ -620,227 +620,227 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U_1" library="kxnStandard_IC_Function" package="ESOP8" value="IP5306" x="-15.24" y="3.81">
-<attribute name="CC_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="U_1" library="kxnStandard_IC_Function" package="ESOP8" value="IP5306" x="4.23" y="11.48" rot="R270">
+<attribute name="CC_LINK" value="" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CC_COST" value="" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CC_ID" value="" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CC_OPTION" value="" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="LINK_MH" value="" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="KXN_ID" value="" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="JLC_PART_COST" value="" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="INFO" value="" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="JLC_PART_LINK" value="" x="0.42" y="-3.76" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C1" library="kxnStandard_capacitor" package="C1206" value="10uF" x="-30.48" y="3.81">
-<attribute name="CC_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="C1206 10uF 25V" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="C1" library="kxnStandard_capacitor" package="C1206" value="10uF" x="2.71" y="16.35">
+<attribute name="CC_LINK" value="" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
+<attribute name="CC_COST" value="" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
+<attribute name="CC_ID" value="" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
+<attribute name="CC_OPTION" value="" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
+<attribute name="LINK_MH" value="" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
+<attribute name="KXN_ID" value="" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_COST" value="" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
+<attribute name="INFO" value="C1206 10uF 25V" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_LINK" value="" x="33.19" y="12.54" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C2" library="kxnStandard_capacitor" package="C1206" value="10uF" x="-15.24" y="11.43">
-<attribute name="CC_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="C1206 10uF 25V" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="C2" library="kxnStandard_capacitor" package="C1206" value="10uF" x="16.95" y="10.56" rot="R90">
+<attribute name="CC_LINK" value="" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CC_COST" value="" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CC_ID" value="" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CC_OPTION" value="" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="LINK_MH" value="" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="KXN_ID" value="" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="JLC_PART_COST" value="" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="INFO" value="C1206 10uF 25V" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="JLC_PART_LINK" value="" x="28.38" y="25.8" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C3" library="kxnStandard_capacitor" package="C1206" value="22uF" x="-20.32" y="11.43">
-<attribute name="CC_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="C1206 22uF 25V" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="C3" library="kxnStandard_capacitor" package="C1206" value="22uF" x="8.36" y="16.29">
+<attribute name="CC_LINK" value="" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
+<attribute name="CC_COST" value="" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
+<attribute name="CC_ID" value="" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
+<attribute name="CC_OPTION" value="" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
+<attribute name="LINK_MH" value="" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
+<attribute name="KXN_ID" value="" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_COST" value="" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
+<attribute name="INFO" value="C1206 22uF 25V" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_LINK" value="" x="28.68" y="4.86" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C4" library="kxnStandard_capacitor" package="C1206" value="22uF" x="-25.4" y="11.43">
-<attribute name="CC_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="C1206 22uF 25V" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="C4" library="kxnStandard_capacitor" package="C1206" value="22uF" x="16.95" y="5.81" rot="R270">
+<attribute name="CC_LINK" value="" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CC_COST" value="" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CC_ID" value="" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CC_OPTION" value="" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="LINK_MH" value="" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="KXN_ID" value="" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="JLC_PART_COST" value="" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="INFO" value="C1206 22uF 25V" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="JLC_PART_LINK" value="" x="5.52" y="-19.59" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C5" library="kxnStandard_capacitor" package="KXN_C0603" value="" x="-30.48" y="11.43">
-<attribute name="CC_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="C0603 22uF 10V" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="C5" library="kxnStandard_capacitor" package="KXN_C0603" value="" x="16.48" y="13.67">
+<attribute name="CC_LINK" value="" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
+<attribute name="CC_COST" value="" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
+<attribute name="CC_ID" value="" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
+<attribute name="CC_OPTION" value="" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
+<attribute name="LINK_MH" value="" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
+<attribute name="KXN_ID" value="" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_COST" value="" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
+<attribute name="INFO" value="C0603 22uF 10V" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_LINK" value="" x="46.96" y="2.24" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C6" library="kxnStandard_capacitor" package="KXN_C0603" value="" x="-15.24" y="17.78">
-<attribute name="CC_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="C0603 22uF 10V" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="C6" library="kxnStandard_capacitor" package="KXN_C0603" value="" x="16.48" y="15.01">
+<attribute name="CC_LINK" value="" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
+<attribute name="CC_COST" value="" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
+<attribute name="CC_ID" value="" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
+<attribute name="CC_OPTION" value="" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
+<attribute name="LINK_MH" value="" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
+<attribute name="KXN_ID" value="" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_COST" value="" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
+<attribute name="INFO" value="C0603 22uF 10V" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_LINK" value="" x="31.72" y="-2.77" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C7" library="kxnStandard_capacitor" package="KXN_C0603" value="" x="-22.86" y="29.21">
-<attribute name="CC_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="C0603 22uF 10V" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="C7" library="kxnStandard_capacitor" package="KXN_C0603" value="" x="16.48" y="16.42">
+<attribute name="CC_LINK" value="" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
+<attribute name="CC_COST" value="" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
+<attribute name="CC_ID" value="" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
+<attribute name="CC_OPTION" value="" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
+<attribute name="LINK_MH" value="" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
+<attribute name="KXN_ID" value="" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_COST" value="" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
+<attribute name="INFO" value="C0603 22uF 10V" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_LINK" value="" x="39.34" y="-12.79" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R1" library="kxnStandard_resistor" package="R0603" value="2R0" x="-16.51" y="24.13">
-<attribute name="CC_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="R1" library="kxnStandard_resistor" package="R0603" value="2R0" x="5.57" y="7.57">
+<attribute name="CC_LINK" value="" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_COST" value="" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_ID" value="" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_OPTION" value="" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
+<attribute name="LINK_MH" value="" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
+<attribute name="KXN_ID" value="" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_COST" value="" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
+<attribute name="INFO" value="" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_LINK" value="" x="22.08" y="-16.56" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R2" library="kxnStandard_resistor" package="R0603" value="2R0" x="-21.59" y="24.13">
-<attribute name="CC_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="R2" library="kxnStandard_resistor" package="R0603" value="2R0" x="5.56" y="5.57">
+<attribute name="CC_LINK" value="" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_COST" value="" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_ID" value="" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_OPTION" value="" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
+<attribute name="LINK_MH" value="" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
+<attribute name="KXN_ID" value="" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_COST" value="" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
+<attribute name="INFO" value="" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_LINK" value="" x="27.15" y="-18.56" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R3" library="kxnStandard_resistor" package="R0603" value="10k" x="-26.67" y="24.13">
-<attribute name="CC_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="R3" library="kxnStandard_resistor" package="R0603" value="10k" x="5.55" y="3.57">
+<attribute name="CC_LINK" value="" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_COST" value="" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_ID" value="" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_OPTION" value="" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
+<attribute name="LINK_MH" value="" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
+<attribute name="KXN_ID" value="" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_COST" value="" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
+<attribute name="INFO" value="" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
+<attribute name="JLC_PART_LINK" value="" x="32.22" y="-20.56" size="1.778" layer="27" display="off"/>
 </element>
-<element name="LED1" library="kxnStandard_led" package="KXN_LED_0603" value="RED" x="-30.48" y="22.86">
-<attribute name="CC_LINK" value="https://item.taobao.com/item.htm?id=522554271548&amp;skuId=5766142345185" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="0.025" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="C2286" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="522554271548" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="0603_红色(20只)" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="SA12131249" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="0.0056" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="Led 0603 RED" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0603R/C2286" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="LED1" library="kxnStandard_led" package="KXN_LED_0603" value="RED" x="1.64" y="2.59" rot="R180">
+<attribute name="CC_LINK" value="https://item.taobao.com/item.htm?id=522554271548&amp;skuId=5766142345185" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_COST" value="0.025" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_ID" value="C2286" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_ID" value="522554271548" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_OPTION" value="0603_红色(20只)" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="LINK_MH" value="" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="KXN_ID" value="SA12131249" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_COST" value="0.0056" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="INFO" value="Led 0603 RED" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_LINK" value="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0603R/C2286" x="-28.84" y="25.45" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="LED2" library="kxnStandard_led" package="KXN_LED_0603" value="RED" x="-34.29" y="22.86">
-<attribute name="CC_LINK" value="https://item.taobao.com/item.htm?id=522554271548&amp;skuId=5766142345185" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="0.025" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="C2286" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="522554271548" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="0603_红色(20只)" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="SA12131249" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="0.0056" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="Led 0603 RED" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0603R/C2286" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="LED2" library="kxnStandard_led" package="KXN_LED_0603" value="RED" x="1.64" y="4.33" rot="R180">
+<attribute name="CC_LINK" value="https://item.taobao.com/item.htm?id=522554271548&amp;skuId=5766142345185" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_COST" value="0.025" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_ID" value="C2286" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_ID" value="522554271548" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_OPTION" value="0603_红色(20只)" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="LINK_MH" value="" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="KXN_ID" value="SA12131249" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_COST" value="0.0056" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="INFO" value="Led 0603 RED" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_LINK" value="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0603R/C2286" x="-32.65" y="27.19" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="LED3" library="kxnStandard_led" package="KXN_LED_0603" value="RED" x="-15.24" y="27.94">
-<attribute name="CC_LINK" value="https://item.taobao.com/item.htm?id=522554271548&amp;skuId=5766142345185" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="0.025" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="C2286" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="522554271548" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="0603_红色(20只)" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="SA12131249" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="0.0056" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="Led 0603 RED" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0603R/C2286" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="LED3" library="kxnStandard_led" package="KXN_LED_0603" value="RED" x="1.64" y="6.07" rot="R180">
+<attribute name="CC_LINK" value="https://item.taobao.com/item.htm?id=522554271548&amp;skuId=5766142345185" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_COST" value="0.025" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_ID" value="C2286" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_ID" value="522554271548" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_OPTION" value="0603_红色(20只)" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="LINK_MH" value="" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="KXN_ID" value="SA12131249" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_COST" value="0.0056" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="INFO" value="Led 0603 RED" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_LINK" value="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0603R/C2286" x="-13.6" y="34.01" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="LED4" library="kxnStandard_led" package="KXN_LED_0603" value="RED" x="-19.05" y="27.94">
-<attribute name="CC_LINK" value="https://item.taobao.com/item.htm?id=522554271548&amp;skuId=5766142345185" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="0.025" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="C2286" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="522554271548" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="0603_红色(20只)" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="SA12131249" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="0.0056" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="Led 0603 RED" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0603R/C2286" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="LED4" library="kxnStandard_led" package="KXN_LED_0603" value="RED" x="1.64" y="7.81" rot="R180">
+<attribute name="CC_LINK" value="https://item.taobao.com/item.htm?id=522554271548&amp;skuId=5766142345185" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_COST" value="0.025" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_ID" value="C2286" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_ID" value="522554271548" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_OPTION" value="0603_红色(20只)" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="LINK_MH" value="" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="KXN_ID" value="SA12131249" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_COST" value="0.0056" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="CC_SHOP" value="CongCo" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="INFO" value="Led 0603 RED" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="JLC_PART_LINK" value="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0603R/C2286" x="-17.41" y="35.75" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="L1" library="kxnStandard_inductor" package="CKST_0603_0630_PACK" value="1R0" x="-22.86" y="3.81">
-<attribute name="CC_COST" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="L1" library="kxnStandard_inductor" package="CKST_0603_0630_PACK" value="1R0" x="12.34" y="9.06" rot="R90">
+<attribute name="CC_COST" value="" x="16.15" y="31.92" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="JLC_PART_ID" value="" x="16.15" y="31.92" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CC_ID" value="" x="16.15" y="31.92" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CC_OPTION" value="" x="16.15" y="31.92" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="LINK_MH" value="" x="16.15" y="31.92" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="INFO" value="" x="16.15" y="31.92" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="U$1" library="kxn_Standard_button_switch" package="KXN_BUTTON_3_4_2.5MM" value="KAYO_GOLD_BUTTON_4_BLACK4_3X4X2.5_WHITE" x="-25.4" y="17.78">
-<attribute name="LINK_MH" value="" x="0" y="0" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="BUTTON 4P SMD 3*4*2.5" x="0" y="0" size="1.778" layer="27" display="off"/>
+<element name="U$1" library="kxn_Standard_button_switch" package="KXN_BUTTON_3_4_2.5MM" value="KAYO_GOLD_BUTTON_4_BLACK4_3X4X2.5_WHITE" x="11.26" y="1.98">
+<attribute name="LINK_MH" value="" x="36.66" y="-15.8" size="1.778" layer="27" display="off"/>
+<attribute name="INFO" value="BUTTON 4P SMD 3*4*2.5" x="36.66" y="-15.8" size="1.778" layer="27" display="off"/>
 </element>
 </elements>
 <signals>
@@ -848,8 +848,8 @@ design rules under a new name.</description>
 <contactref element="U_1" pad="1"/>
 <contactref element="R1" pad="2"/>
 <contactref element="C1" pad="1"/>
-<wire x1="-17.145" y1="1.21" x2="-31.88" y2="3.81" width="0" layer="19" extent="1-1"/>
-<wire x1="-15.66" y1="24.13" x2="-17.145" y2="1.21" width="0" layer="19" extent="1-1"/>
+<wire x1="1.63" y1="13.385" x2="1.31" y2="16.35" width="0" layer="19" extent="1-1"/>
+<wire x1="6.42" y1="7.57" x2="1.63" y2="13.385" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND">
 <contactref element="C1" pad="2"/>
@@ -861,64 +861,64 @@ design rules under a new name.</description>
 <contactref element="C7" pad="2"/>
 <contactref element="U$1" pad="B"/>
 <contactref element="U_1" pad="9"/>
-<wire x1="-29.78" y1="11.43" x2="-29.08" y2="3.81" width="0" layer="19" extent="1-1"/>
-<wire x1="-24" y1="11.43" x2="-29.78" y2="11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="-18.92" y1="11.43" x2="-24" y2="11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="-13.84" y1="11.43" x2="-18.92" y2="11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="-14.54" y1="17.78" x2="-13.84" y2="11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="-27.55" y1="18.855" x2="-29.78" y2="11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="-15.24" y1="3.81" x2="-13.84" y2="11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="-22.16" y1="29.21" x2="-27.55" y2="18.855" width="0" layer="19" extent="1-1"/>
+<wire x1="17.18" y1="15.01" x2="17.18" y2="16.42" width="0" layer="19" extent="1-1"/>
+<wire x1="17.18" y1="13.67" x2="17.18" y2="15.01" width="0" layer="19" extent="1-1"/>
+<wire x1="16.95" y1="11.96" x2="17.18" y2="13.67" width="0" layer="19" extent="1-1"/>
+<wire x1="9.76" y1="16.29" x2="16.95" y2="11.96" width="0" layer="19" extent="1-1"/>
+<wire x1="4.11" y1="16.35" x2="9.76" y2="16.29" width="0" layer="19" extent="1-1"/>
+<wire x1="4.23" y1="11.48" x2="4.11" y2="16.35" width="0" layer="19" extent="1-1"/>
+<wire x1="16.95" y1="4.41" x2="16.95" y2="11.96" width="0" layer="19" extent="1-1"/>
+<wire x1="9.11" y1="3.055" x2="16.95" y2="4.41" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="R1" pad="1"/>
 <contactref element="C2" pad="1"/>
-<wire x1="-16.64" y1="11.43" x2="-17.36" y2="24.13" width="0" layer="19" extent="1-1"/>
+<wire x1="4.72" y1="7.57" x2="16.95" y2="9.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VBAT">
 <contactref element="C3" pad="1"/>
 <contactref element="L1" pad="P$1"/>
 <contactref element="R2" pad="1"/>
-<wire x1="-21.72" y1="11.43" x2="-25.86" y2="3.81" width="0" layer="19" extent="1-1"/>
-<wire x1="-22.44" y1="24.13" x2="-21.72" y2="11.43" width="0" layer="19" extent="1-1"/>
+<wire x1="12.34" y1="6.06" x2="6.96" y2="16.29" width="0" layer="19" extent="1-1"/>
+<wire x1="4.71" y1="5.57" x2="12.34" y2="6.06" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OUT-5V">
 <contactref element="C5" pad="1"/>
 <contactref element="C6" pad="1"/>
 <contactref element="C7" pad="1"/>
 <contactref element="U_1" pad="8"/>
-<wire x1="-17.145" y1="6.41" x2="-31.18" y2="11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="-15.94" y1="17.78" x2="-17.145" y2="6.41" width="0" layer="19" extent="1-1"/>
-<wire x1="-23.56" y1="29.21" x2="-15.94" y2="17.78" width="0" layer="19" extent="1-1"/>
+<wire x1="15.78" y1="15.01" x2="15.78" y2="16.42" width="0" layer="19" extent="1-1"/>
+<wire x1="15.78" y1="13.67" x2="15.78" y2="15.01" width="0" layer="19" extent="1-1"/>
+<wire x1="6.83" y1="13.385" x2="15.78" y2="13.67" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="R3" pad="1"/>
 <contactref element="U$1" pad="A"/>
-<wire x1="-27.52" y1="24.13" x2="-27.55" y2="16.705" width="0" layer="19" extent="1-1"/>
+<wire x1="4.7" y1="3.57" x2="9.11" y2="0.905" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="U_1" pad="6"/>
 <contactref element="C4" pad="1"/>
 <contactref element="R2" pad="2"/>
-<wire x1="-14.605" y1="6.41" x2="-26.8" y2="11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="-20.74" y1="24.13" x2="-26.8" y2="11.43" width="0" layer="19" extent="1-1"/>
+<wire x1="6.41" y1="5.57" x2="16.95" y2="7.21" width="0" layer="19" extent="1-1"/>
+<wire x1="6.83" y1="10.845" x2="6.41" y2="5.57" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="U_1" pad="7"/>
 <contactref element="L1" pad="P$2"/>
-<wire x1="-15.875" y1="6.41" x2="-19.86" y2="3.81" width="0" layer="19" extent="1-1"/>
+<wire x1="6.83" y1="12.115" x2="12.34" y2="12.06" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$5">
 <contactref element="R3" pad="2"/>
 <contactref element="U_1" pad="5"/>
-<wire x1="-25.82" y1="24.13" x2="-13.335" y2="6.41" width="0" layer="19" extent="1-1"/>
+<wire x1="6.4" y1="3.57" x2="6.83" y2="9.575" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
 <contactref element="U_1" pad="2"/>
 <contactref element="LED1" pad="A"/>
 <contactref element="LED2" pad="C"/>
-<wire x1="-29.78" y1="22.86" x2="-15.875" y2="1.21" width="0" layer="19" extent="1-1"/>
-<wire x1="-34.99" y1="22.86" x2="-29.78" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="2.34" y1="4.33" x2="1.63" y2="12.115" width="0" layer="19" extent="1-1"/>
+<wire x1="0.94" y1="2.59" x2="2.34" y2="4.33" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
 <contactref element="LED1" pad="C"/>
@@ -926,17 +926,29 @@ design rules under a new name.</description>
 <contactref element="LED3" pad="C"/>
 <contactref element="LED4" pad="A"/>
 <contactref element="U_1" pad="4"/>
-<wire x1="-18.35" y1="27.94" x2="-15.94" y2="27.94" width="0" layer="19" extent="1-1"/>
-<wire x1="-31.18" y1="22.86" x2="-18.35" y2="27.94" width="0" layer="19" extent="1-1"/>
-<wire x1="-33.59" y1="22.86" x2="-31.18" y2="22.86" width="0" layer="19" extent="1-1"/>
-<wire x1="-13.335" y1="1.21" x2="-15.94" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="1.63" y1="9.575" x2="0.94" y2="7.81" width="0" layer="19" extent="1-1"/>
+<wire x1="2.34" y1="6.07" x2="0.94" y2="7.81" width="0" layer="19" extent="1-1"/>
+<wire x1="0.94" y1="4.33" x2="2.34" y2="6.07" width="0" layer="19" extent="1-1"/>
+<wire x1="2.34" y1="2.59" x2="0.94" y2="4.33" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
 <contactref element="LED3" pad="A"/>
 <contactref element="U_1" pad="3"/>
 <contactref element="LED4" pad="C"/>
-<wire x1="-19.75" y1="27.94" x2="-14.54" y2="27.94" width="0" layer="19" extent="1-1"/>
-<wire x1="-14.605" y1="1.21" x2="-14.54" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="2.34" y1="7.81" x2="1.63" y2="10.845" width="0" layer="19" extent="1-1"/>
+<wire x1="0.94" y1="6.07" x2="2.34" y2="7.81" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$9">
+<polygon width="0.3048" layer="1">
+<vertex x="-0.1" y="17.6"/>
+<vertex x="18.5" y="17.6"/>
+<vertex x="18.5" y="0.1"/>
+<vertex x="-0.1" y="0.1"/>
+</polygon>
+</signal>
+<signal name="N$10">
+<wire x1="10.8" y1="12.2" x2="6.7" y2="12.2" width="0.3048" layer="16"/>
+<wire x1="6.7" y1="12.2" x2="6.7" y2="12" width="0.3048" layer="16"/>
 </signal>
 </signals>
 </board>

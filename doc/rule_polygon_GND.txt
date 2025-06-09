@@ -1,0 +1,4 @@
+Thông số polygon GND
+rank 6
+isolate 0.3
+width 0.2

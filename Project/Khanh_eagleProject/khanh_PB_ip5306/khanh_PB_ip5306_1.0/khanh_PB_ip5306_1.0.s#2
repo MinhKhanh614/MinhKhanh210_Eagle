@@ -6211,10 +6211,10 @@ https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-21223910208.37.43076a4bKJ
 <part name="C1" library="kxnStandard_capacitor" deviceset="KAYO_CAP_CERAMIC" device="_1206" technology="10UF" value="10uF"/>
 <part name="C2" library="kxnStandard_capacitor" deviceset="KAYO_CAP_CERAMIC" device="_1206" technology="10UF" value="10uF"/>
 <part name="C3" library="kxnStandard_capacitor" deviceset="KAYO_CAP_CERAMIC" device="_1206" technology="22UF" value="22uF"/>
-<part name="C4" library="kxnStandard_capacitor" deviceset="KAYO_CAP_CERAMIC" device="_1206" value="22u"/>
-<part name="C5" library="kxnStandard_capacitor" deviceset="KAYO_CAP_CERAMIC" device="_1206" value="22u"/>
-<part name="C6" library="kxnStandard_capacitor" deviceset="KAYO_CAP_CERAMIC" device="_1206" value="22u"/>
-<part name="C7" library="kxnStandard_capacitor" deviceset="KAYO_CAP_CERAMIC" device="_KXN_0603" value="22u"/>
+<part name="C4" library="kxnStandard_capacitor" deviceset="KAYO_CAP_CERAMIC" device="_1206" technology="22UF" value="22uF"/>
+<part name="C5" library="kxnStandard_capacitor" deviceset="KAYO_CAP_CERAMIC" device="_KXN_0603" technology="22UF"/>
+<part name="C6" library="kxnStandard_capacitor" deviceset="KAYO_CAP_CERAMIC" device="_KXN_0603" technology="22UF"/>
+<part name="C7" library="kxnStandard_capacitor" deviceset="KAYO_CAP_CERAMIC" device="_KXN_0603" technology="22UF"/>
 <part name="R1" library="kxnStandard_resistor" deviceset="R-US_" device="R0603" value="2R0"/>
 <part name="R2" library="kxnStandard_resistor" deviceset="R-US_" device="R0603" value="2R0"/>
 <part name="R3" library="kxnStandard_resistor" deviceset="R-US_" device="R0603" value="10k"/>
