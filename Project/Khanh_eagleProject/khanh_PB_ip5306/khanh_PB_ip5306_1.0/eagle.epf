@@ -1,0 +1,57 @@
+[Eagle]
+Version="06 06 00"
+Platform="Windows"
+Serial="62191E841E-LSR-WLM-1EL"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/VThanh_Mega_Pinout.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_Buzzer.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_Crystal.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_Flash_IC.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_IC_Function.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_IC_Power.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_LCD.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_Relay.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_Ruler.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_Sensor.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_TestBoard.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_capacitor.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_connector.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_diod.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_fet.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_frame_mutilsensor.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_hole.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_inductor.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_interface.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_led.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_opam.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_resistor.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_shield.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_supply1.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_supply2.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxnStandard_transistor.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_Standard_3D.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_Standard_Frame_Document.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_Standard_HeatSink.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_Standard_MCU.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_Standard_battery.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_Standard_button_switch.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_Standard_fuse.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_Standard_logo.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_Standard_module_ForTutorial.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_Standard_stm8.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_Standard_wireless_module.lbr"
+UsedLibrary="D:/Github/MinhKhanh210_Eagle/EagleCad_Lib/kxnStandardEagleLib_1.0/kxn_makerkids_image.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="375 165 974 564"
+State=1
+Number=0
+
+[Desktop]
+Screen="1366 768"
+Window="Win_1"
