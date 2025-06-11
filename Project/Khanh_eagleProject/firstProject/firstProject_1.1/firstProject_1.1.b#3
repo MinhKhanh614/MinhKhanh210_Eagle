@@ -407,41 +407,6 @@
 </package>
 </packages>
 </library>
-<library name="kxnStandard_connector">
-<description>SparkFun Electronics' preferred foot prints
-In this library you'll find non-functional items- supply symbols, logos, notations, frame blocks, etc.
-
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com. 
-&lt;br&gt;
-Licensing: Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="HEADER_1X2_254">
-<wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="0" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0" y1="0.635" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="1.27" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="2.54" y1="0.635" x2="2.54" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="2.54" y1="-0.635" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-1.27" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="0" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
-<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
-<pad name="1" x="-1.27" y="0" drill="0.95" diameter="1.6764" shape="octagon" rot="R90"/>
-<pad name="2" x="1.27" y="0" drill="0.95" diameter="1.6764" shape="octagon" rot="R90"/>
-<text x="-2.6162" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-</package>
-</packages>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -753,7 +718,7 @@ These are the free and generally easy to produce 2-layer PCB design rules. You c
 <attribute name="INFO" value="100uF 16V size 6.3*5.4mm" x="50.8" y="71.7" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="JLC_PART_LINK" value="" x="50.8" y="71.7" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C7" library="kxnStandard_capacitor" package="KXN_C0603" value="22u" x="64.2" y="72.2" rot="R270">
+<element name="C7" library="kxnStandard_capacitor" package="KXN_C0603" value="" x="64.2" y="72.2" rot="R270">
 <attribute name="CC_LINK" value="" x="64.2" y="72.2" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="CC_COST" value="" x="64.2" y="72.2" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="JLC_PART_ID" value="" x="64.2" y="72.2" size="1.778" layer="27" rot="R270" display="off"/>
@@ -767,7 +732,7 @@ These are the free and generally easy to produce 2-layer PCB design rules. You c
 <attribute name="INFO" value="C0603 22uF 10V" x="64.2" y="72.2" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="JLC_PART_LINK" value="" x="64.2" y="72.2" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C8" library="kxnStandard_capacitor" package="KXN_C0603" value="22u" x="46" y="72.2" rot="R270">
+<element name="C8" library="kxnStandard_capacitor" package="KXN_C0603" value="" x="46" y="72.2" rot="R270">
 <attribute name="CC_LINK" value="" x="46" y="72.2" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="CC_COST" value="" x="46" y="72.2" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="JLC_PART_ID" value="" x="46" y="72.2" size="1.778" layer="27" rot="R270" display="off"/>
@@ -781,36 +746,32 @@ These are the free and generally easy to produce 2-layer PCB design rules. You c
 <attribute name="INFO" value="C0603 22uF 10V" x="46" y="72.2" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="JLC_PART_LINK" value="" x="46" y="72.2" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U$1" library="kxnStandard_connector" package="HEADER_1X2_254" value="HEADER_BLACK_254_1X2" x="3.2" y="-3.6">
-<attribute name="CC_LINK" value="" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="3.2" y="-3.6" size="1.778" layer="27" display="off"/>
-</element>
-<element name="U$2" library="kxnStandard_connector" package="HEADER_1X2_254" value="HEADER_BLACK_254_1X2" x="3.2" y="-10.9">
-<attribute name="CC_LINK" value="" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-<attribute name="CC_COST" value="" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_ID" value="" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-<attribute name="CC_ID" value="" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-<attribute name="CC_OPTION" value="" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-<attribute name="LINK_MH" value="" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-<attribute name="KXN_ID" value="" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_COST" value="" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-<attribute name="CC_SHOP" value="CongCo" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-<attribute name="INFO" value="" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-<attribute name="JLC_PART_LINK" value="" x="3.2" y="-10.9" size="1.778" layer="27" display="off"/>
-</element>
 </elements>
 <signals>
+<signal name="N$1">
+<contactref element="C5" pad="+"/>
+<contactref element="R3" pad="2"/>
+<contactref element="ASM1117_1" pad="3"/>
+<contactref element="C7" pad="1"/>
+<wire x1="69.3" y1="74.4" x2="64.6" y2="74.4" width="0.6096" layer="1"/>
+<wire x1="64.6" y1="74.4" x2="64.3" y2="74.1" width="0.6096" layer="1"/>
+<wire x1="64.3" y1="74.1" x2="64.3" y2="73" width="0.6096" layer="1"/>
+<wire x1="64.3" y1="73" x2="64.2" y2="72.9" width="0.6096" layer="1"/>
+<wire x1="61.6014" y1="68.5104" x2="61.6014" y2="71.7014" width="0.6096" layer="1"/>
+<wire x1="61.6014" y1="71.7014" x2="62.8" y2="72.9" width="0.6096" layer="1"/>
+<wire x1="62.8" y1="72.9" x2="62.8" y2="74.1" width="0.6096" layer="1"/>
+<wire x1="62.8" y1="74.1" x2="63.1" y2="74.4" width="0.6096" layer="1"/>
+<wire x1="63.1" y1="74.4" x2="64.6" y2="74.4" width="0.6096" layer="1"/>
+<wire x1="52.36" y1="63.24" x2="52.36" y2="61.34" width="0.6096" layer="1"/>
+<wire x1="52.36" y1="61.34" x2="53.2" y2="60.5" width="0.6096" layer="1"/>
+<wire x1="53.2" y1="60.5" x2="71" y2="60.5" width="0.6096" layer="1"/>
+<wire x1="71" y1="60.5" x2="71.8" y2="61.3" width="0.6096" layer="1"/>
+<wire x1="71.8" y1="61.3" x2="71.8" y2="65.3" width="0.6096" layer="1"/>
+<wire x1="71.8" y1="65.3" x2="70.9" y2="66.2" width="0.6096" layer="1"/>
+<wire x1="69.3" y1="74.4" x2="69.6" y2="74.4" width="0.6096" layer="1"/>
+<wire x1="69.6" y1="74.4" x2="70.9" y2="73.1" width="0.6096" layer="1"/>
+<wire x1="70.9" y1="73.1" x2="70.9" y2="66.2" width="0.6096" layer="1"/>
+</signal>
 <signal name="N$2">
 <contactref element="R3" pad="1"/>
 <contactref element="LED3" pad="A"/>
@@ -818,7 +779,20 @@ These are the free and generally easy to produce 2-layer PCB design rules. You c
 <wire x1="52.35" y1="64.65" x2="52.36" y2="64.64" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$4">
+<contactref element="C6" pad="+"/>
 <contactref element="ASM1117_1" pad="2"/>
+<contactref element="C8" pad="1"/>
+<contactref element="R2" pad="2"/>
+<wire x1="46" y1="72.9" x2="46" y2="80.7" width="0.6096" layer="1"/>
+<wire x1="46" y1="80.7" x2="46.5" y2="81.2" width="0.6096" layer="1"/>
+<wire x1="46.5" y1="81.2" x2="48.1" y2="81.2" width="0.6096" layer="1"/>
+<wire x1="48.1" y1="81.2" x2="48.4" y2="80.9" width="0.6096" layer="1"/>
+<wire x1="48.4" y1="80.9" x2="48.4" y2="79.2" width="0.6096" layer="1"/>
+<wire x1="48.4" y1="79.2" x2="48.9" y2="78.7" width="0.6096" layer="1"/>
+<wire x1="48.9" y1="78.7" x2="50.5" y2="78.7" width="0.6096" layer="1"/>
+<wire x1="50.5" y1="78.7" x2="50.8" y2="78.4" width="0.6096" layer="1"/>
+<wire x1="50.8" y1="78.4" x2="50.8" y2="74.3" width="0.6096" layer="1"/>
+<wire x1="50.8" y1="74.3" x2="50.8" y2="73.8" width="0.6096" layer="1"/>
 <wire x1="50.8" y1="73.8" x2="52.2" y2="72.4" width="0.6096" layer="1"/>
 <wire x1="52.2" y1="72.4" x2="53.9" y2="72.4" width="0.6096" layer="1"/>
 <wire x1="53.9" y1="72.4" x2="54.9" y2="71.4" width="0.6096" layer="1"/>
@@ -829,15 +803,8 @@ These are the free and generally easy to produce 2-layer PCB design rules. You c
 <wire x1="59.3154" y1="62.4846" x2="60" y2="61.8" width="0.6096" layer="1"/>
 <wire x1="60" y1="61.8" x2="68.9" y2="61.8" width="0.6096" layer="1"/>
 <wire x1="68.9" y1="61.8" x2="69.2" y2="62.1" width="0.6096" layer="1"/>
+<wire x1="69.2" y1="62.1" x2="69.2" y2="63.37" width="0.6096" layer="1"/>
 <wire x1="59.3154" y1="68.5104" x2="59.3154" y2="62.4846" width="0.6096" layer="1"/>
-<contactref element="R2" pad="2"/>
-<contactref element="C8" pad="1"/>
-<contactref element="C6" pad="+"/>
-<contactref element="U$1" pad="1"/>
-<wire x1="69.2" y1="62.1" x2="69.2" y2="63.37" width="0" layer="19" extent="1-1"/>
-<wire x1="50.8" y1="74.3" x2="50.8" y2="73.8" width="0" layer="19" extent="1-1"/>
-<wire x1="46" y1="72.9" x2="50.8" y2="73.8" width="0" layer="19" extent="1-1"/>
-<wire x1="1.93" y1="-3.6" x2="60" y2="61.8" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$5">
 <contactref element="LED2" pad="A"/>
@@ -862,9 +829,24 @@ These are the free and generally easy to produce 2-layer PCB design rules. You c
 <wire x1="58.8996" y1="75.2" x2="59.29" y2="74.8096" width="0.6096" layer="1"/>
 </signal>
 <signal name="GND">
+<contactref element="C5" pad="-"/>
 <contactref element="LED3" pad="C"/>
 <contactref element="C7" pad="2"/>
 <contactref element="ASM1117_1" pad="1"/>
+<contactref element="C6" pad="-"/>
+<contactref element="LED2" pad="C"/>
+<contactref element="LED1" pad="C"/>
+<contactref element="C8" pad="2"/>
+<wire x1="46" y1="71.5" x2="45" y2="71.5" width="0.6096" layer="1"/>
+<wire x1="45" y1="71.5" x2="44.8" y2="71.7" width="0.6096" layer="1"/>
+<wire x1="44.8" y1="71.7" x2="44.8" y2="81.3" width="0.6096" layer="1"/>
+<wire x1="44.8" y1="81.3" x2="45.8" y2="82.3" width="0.6096" layer="1"/>
+<wire x1="45.8" y1="82.3" x2="48.6" y2="82.3" width="0.6096" layer="1"/>
+<wire x1="48.6" y1="82.3" x2="49.4" y2="81.5" width="0.6096" layer="1"/>
+<wire x1="49.4" y1="81.5" x2="49.4" y2="80" width="0.6096" layer="1"/>
+<wire x1="49.4" y1="80" x2="49.6" y2="79.8" width="0.6096" layer="1"/>
+<wire x1="49.6" y1="79.8" x2="50.51" y2="79.8" width="0.6096" layer="1"/>
+<wire x1="50.51" y1="79.8" x2="50.53" y2="79.82" width="0.6096" layer="1"/>
 <polygon width="0.1" layer="1" isolate="0.3048" rank="6">
 <vertex x="43.1" y="83.5"/>
 <vertex x="75" y="83.5"/>
@@ -878,40 +860,6 @@ These are the free and generally easy to produce 2-layer PCB design rules. You c
 <vertex x="70.9" y="67"/>
 <vertex x="67.8" y="67"/>
 </polygon>
-<contactref element="LED2" pad="C"/>
-<contactref element="C6" pad="-"/>
-<contactref element="C8" pad="2"/>
-<contactref element="LED1" pad="C"/>
-<contactref element="C5" pad="-"/>
-<contactref element="U$2" pad="1"/>
-<contactref element="U$1" pad="2"/>
-<wire x1="64.2" y1="71.5" x2="69.3" y2="69.2" width="0" layer="19" extent="1-1"/>
-<wire x1="67.6" y1="63.41" x2="69.3" y2="69.2" width="0" layer="19" extent="1-1"/>
-<wire x1="57.0294" y1="68.5104" x2="64.2" y2="71.5" width="0" layer="19" extent="1-1"/>
-<wire x1="50.8" y1="69.1" x2="57.0294" y2="68.5104" width="0" layer="19" extent="1-1"/>
-<wire x1="46" y1="71.5" x2="50.8" y2="69.1" width="0" layer="19" extent="1-1"/>
-<wire x1="50.74" y1="63.25" x2="50.8" y2="69.1" width="0" layer="19" extent="1-1"/>
-<wire x1="50.53" y1="79.82" x2="46" y2="71.5" width="0" layer="19" extent="1-1"/>
-<wire x1="4.47" y1="-3.6" x2="50.74" y2="63.25" width="0" layer="19" extent="1-1"/>
-<wire x1="1.93" y1="-10.9" x2="4.47" y2="-3.6" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$3">
-<contactref element="ASM1117_1" pad="3"/>
-<contactref element="C7" pad="1"/>
-<wire x1="64.6" y1="74.4" x2="64.3" y2="74.1" width="0.6096" layer="1"/>
-<wire x1="64.3" y1="74.1" x2="64.3" y2="73" width="0.6096" layer="1"/>
-<wire x1="64.3" y1="73" x2="64.2" y2="72.9" width="0.6096" layer="1"/>
-<wire x1="61.6014" y1="68.5104" x2="61.6014" y2="71.7014" width="0.6096" layer="1"/>
-<wire x1="61.6014" y1="71.7014" x2="62.8" y2="72.9" width="0.6096" layer="1"/>
-<wire x1="62.8" y1="72.9" x2="62.8" y2="74.1" width="0.6096" layer="1"/>
-<wire x1="62.8" y1="74.1" x2="63.1" y2="74.4" width="0.6096" layer="1"/>
-<wire x1="63.1" y1="74.4" x2="64.6" y2="74.4" width="0.6096" layer="1"/>
-<contactref element="R3" pad="2"/>
-<contactref element="C5" pad="+"/>
-<contactref element="U$2" pad="2"/>
-<wire x1="64.6" y1="74.4" x2="69.3" y2="74.4" width="0" layer="19" extent="1-1"/>
-<wire x1="52.36" y1="63.24" x2="61.6014" y2="68.5104" width="0" layer="19" extent="1-1"/>
-<wire x1="4.47" y1="-10.9" x2="52.36" y2="63.24" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <errors>
